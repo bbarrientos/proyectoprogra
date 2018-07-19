@@ -14,7 +14,7 @@ class Home extends StatelessWidget{
               new RaisedButton(
                 elevation: (5.0),
                 child: new Text("Log in"),
-                onPressed: (){Navigator.of(context).pushNamed('/Login');}
+                onPressed: (){Navigator.pushNamed(context, '/Login');}
               )
             ],
           ),
