@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'views/home.dart';
-import 'views/login.dart';
+import 'views/perfil.dart';
+import 'views/fichas.dart';
+import 'views/nuevaFicha.dart';
 import 'code/CustomRoute.dart';
 
 void main() => runApp(new MyApp());
@@ -16,8 +19,16 @@ class MyApp extends StatelessWidget {
             builder: (_) => new Home(),
             settings: settings,
           );
-          case '/Login': return new CustomRoute(
-            builder: (_) => new Login(),
+          case '/Perfil': return new CustomRoute(
+            builder: (_) => new Perfil(),
+            settings: settings,
+          );
+          case '/Fichas': return new CustomRoute(
+            builder: (_) => new Fichas(),
+            settings: settings,
+          );
+          case '/NuevaFicha': return new CustomRoute(
+            builder: (_) => new NuevaFicha(),
             settings: settings,
           );
         }
