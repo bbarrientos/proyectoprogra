@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:proyectoprograufro/code/ficha.dart';
 
 class Home extends StatelessWidget{
+  final MostrarFichas mostrarDatosLista = new MostrarFichas();
   @override
   Widget build(BuildContext context) {
+
+
+
+
+
+
+
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('CODA UFRO'),
         ),
+
+
+
         drawer: new Drawer(
           child: new ListView(
             children: <Widget>[
@@ -39,7 +52,10 @@ class Home extends StatelessWidget{
             ],
           ),
         ),
-      body: new Center(
+
+
+      body: mostrarDatosLista,
+      /*Center(
         child:  Container(
           padding: new EdgeInsets.all(32.0),
           child: new Column(
@@ -48,7 +64,8 @@ class Home extends StatelessWidget{
             ],
           ),
         ),
-      )
+      )*/
     );
   }
 }
+

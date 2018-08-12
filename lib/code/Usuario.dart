@@ -1,4 +1,4 @@
-import 'package:proyectoprograufro/code/Ficha.dart';
+import 'package:proyectoprograufro/code/Ficha_german.dart';
 
 class Usuario{
 

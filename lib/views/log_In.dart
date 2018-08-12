@@ -3,13 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/views/home.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-/*import 'package:google_sign_in/google_sign_in.dart';
-import 'dart:async';*/
 import 'package:proyectoprograufro/code/conexion.dart';
 
 class Verificacion extends StatefulWidget {
   static String tag = 'login-page';
-  //final validacion_gf val = new validacion_gf();
   @override
   _LoginPageState createState() => new _LoginPageState();
   Home home() => new Home();
@@ -22,59 +19,24 @@ class _LoginPageState extends State<Verificacion> {
 
   @override
   Widget build(BuildContext context) {
-/*
-    final logo = Hero(
-      tag: 'hero',
-      child: CircleAvatar(
-        backgroundColor: Colors.transparent,
-        radius: 48.0,
-        child: Image.asset('images/ufro.png'),
-      ),
-    );
-
-    final email = TextFormField(
-      keyboardType: TextInputType.emailAddress,
-      autofocus: false,
-      initialValue: 'b.barrientos01@ufromail.cl',
-      decoration: InputDecoration(
-        hintText: 'Email',
-        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
-      ),
-    );
-
-    final password = TextFormField(
-      autofocus: false,
-      initialValue: 'some password',
-      obscureText: true,
-      decoration: InputDecoration(
-        hintText: 'Password',
-        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
-      ),
-    );
-*/
-
     final logininButton = Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
-        borderRadius: BorderRadius.circular(30.0),
+        
+        //borderRadius: BorderRadius.circular(0.0),
         shadowColor: Colors.lightBlueAccent.shade100,
         elevation: 5.0,
         child: MaterialButton(
           minWidth: 200.0,
           height: 42.0,
           onPressed: (){
-            val.signIn().then((FirebaseUser user)=> print(user)).catchError((e)=>print(e));
-            //Navigator.pushNamed(context, '/home');
+            val.signIn().then((FirebaseUser user)=> Navigator.pushNamed(context, '/home'));
           },
           color: Colors.lightBlueAccent,
           child: Text('Ingresar', style: TextStyle(color: Colors.white)),
         ),
       ),
     );
-
-
 
 
     final loginoutButton = Padding(

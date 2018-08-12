@@ -12,7 +12,7 @@ class validacion_gf{
 
     FirebaseUser user = await _auth.signInWithGoogle(idToken: gSA.idToken, accessToken: gSA.accessToken);
 
-    print("USer name: ${user.displayName}");
+    //print("USer name: ${user.displayName}");
     return user;
   }
   void singOut(){
