@@ -1,4 +1,4 @@
-#Sun Jul 22 17:42:20 CLT 2018
-base.0=C\:\\Users\\Colonello-sensei\\Documents\\NetBeansProjects\\Current\\proyectoprograufro\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sat Aug 11 20:42:52 CLT 2018
+base.0=/home/s2c52/git/GItHub/proyectoprograufro/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

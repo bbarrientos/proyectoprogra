@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'views/log_In.dart';
 import 'views/home.dart';
 import 'views/perfil.dart';
 import 'views/fichas.dart';
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: (RouteSettings settings){
         switch(settings.name){
           case '/': return new CustomRoute(
+            builder: (_) => new Verificacion(),
+            settings: settings,
+          );
+          case '/home': return new CustomRoute(
             builder: (_) => new Home(),
             settings: settings,
           );
