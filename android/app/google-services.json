@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "657758067019",
+    "firebase_url": "https://db-codaufro.firebaseio.com",
+    "project_id": "db-codaufro",
+    "storage_bucket": "db-codaufro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657758067019:android:2c4ba435403542de",
+        "android_client_info": {
+          "package_name": "com.example.startupnamer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657758067019-pttt6l6c85ivo06jesf4vulp2gst57vn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.startupnamer",
+            "certificate_hash": "fe7b8cd5f87a5fc572ffa453b1dc92c76954e499"
+          }
+        },
+        {
+          "client_id": "657758067019-qcevdtn25dot1j4t5i966cfdgqtoivdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2WlcUBp7oaxr3syxCdGJP41682qD6cis"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657758067019-qcevdtn25dot1j4t5i966cfdgqtoivdn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
