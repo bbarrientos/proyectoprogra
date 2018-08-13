@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/code/ficha.dart';
 
-class NuevaFicha extends StatelessWidget {
+class NuevaFicha extends StatefulWidget{
+  @override
+  Elementos createState() => new Elementos();
+}
+
+class Elementos extends State<NuevaFicha> {
   final TextEditingController nombre = new TextEditingController();
   final TextEditingController direccion = new TextEditingController();
   final TextEditingController seguro = new TextEditingController();
   final TextEditingController telefono = new TextEditingController();
+  bool isChecked = false;
+
+  void onChange(bool value){
+    setState(() {
+      isChecked = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,28 +75,19 @@ class NuevaFicha extends StatelessWidget {
               ),
             ),
           ),
+          new CheckboxListTile(
+              title: Text("Fonasa"),
+              activeColor: Colors.redAccent,
+              value: isChecked,
+              onChanged: (bool value){
+                onChange(value);
+              },
+
+          ),
           const Divider(
             height: 1.0,
           ),
-          new ListTile(
-            leading: const Icon(Icons.label),
-            title: const Text('Nick'),
-            subtitle: const Text('None'),
-          ),
-          new ListTile(
-            leading: const Icon(Icons.today),
-            title: const Text('Birthday'),
-            subtitle: const Text('February 20, 1980'),
-            trailing: const Icon(
-              Icons.check_circle,
-              color: Colors.green,
-            ),
-          ),
-          new ListTile(
-            leading: const Icon(Icons.group),
-            title: const Text('Contact group'),
-            subtitle: const Text('Not specified'),
-          )
+          
         ],
       ),
     );

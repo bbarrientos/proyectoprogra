@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Aug 12 17:46:30 CLST 2018
+#Sun Aug 12 18:39:51 CLST 2018
 4.path=lib/arm64-v8a/libflutter.so
 13.baseType=DIRECTORY
 8.set=DEX

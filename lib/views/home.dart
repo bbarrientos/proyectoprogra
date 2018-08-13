@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/code/ficha.dart';
-
+import 'package:proyectoprograufro/code/conexion.dart';
 class Home extends StatelessWidget{
   final MostrarFichas mostrarDatosLista = new MostrarFichas();
+  final validacion_gf val = new validacion_gf();
+
+
   @override
   Widget build(BuildContext context) {
 
@@ -49,12 +52,24 @@ class Home extends StatelessWidget{
                   Navigator.pushNamed(context, '/Ajustes');
                 },
               ),
+              new ListTile(
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text('Desconectarse'),
+                onTap:(){
+                  val.singOut();
+                  Navigator.pushNamed(context, '/');
+                },
+              ),
             ],
           ),
         ),
 
 
       body: mostrarDatosLista,
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: (){Navigator.pushNamed(context, '/NuevaFicha');},
+        )
       /*Center(
         child:  Container(
           padding: new EdgeInsets.all(32.0),

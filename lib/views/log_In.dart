@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/views/home.dart';
 
@@ -9,35 +8,33 @@ class Verificacion extends StatefulWidget {
   static String tag = 'login-page';
   @override
   _LoginPageState createState() => new _LoginPageState();
-  Home home() => new Home();
 }
 
 class _LoginPageState extends State<Verificacion> {
   final validacion_gf val = new validacion_gf();
 
-
-
   @override
   Widget build(BuildContext context) {
+
+
     final logininButton = Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
-        
         //borderRadius: BorderRadius.circular(0.0),
         shadowColor: Colors.lightBlueAccent.shade100,
         elevation: 5.0,
         child: MaterialButton(
           minWidth: 200.0,
           height: 42.0,
-          onPressed: (){
-            val.signIn().then((FirebaseUser user)=> Navigator.pushNamed(context, '/home'));
+          onPressed: () {
+            val.signIn().then(
+                (FirebaseUser user) => Navigator.pushNamed(context, '/home'));
           },
           color: Colors.lightBlueAccent,
           child: Text('Ingresar', style: TextStyle(color: Colors.white)),
         ),
       ),
     );
-
 
     final loginoutButton = Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
@@ -48,7 +45,7 @@ class _LoginPageState extends State<Verificacion> {
         child: MaterialButton(
           minWidth: 200.0,
           height: 42.0,
-          onPressed: (){
+          onPressed: () {
             val.singOut();
             //Navigator.pushNamed(context, '/home');
           },
@@ -57,8 +54,14 @@ class _LoginPageState extends State<Verificacion> {
         ),
       ),
     );
-
-
+    final background = Container(
+      decoration: new BoxDecoration(
+        image : new DecorationImage(
+          image: new AssetImage("images/back.png")
+        )
+      ),
+      child: null
+    );
 
     final forgotLabel = FlatButton(
       child: Text(
@@ -85,7 +88,8 @@ class _LoginPageState extends State<Verificacion> {
             SizedBox(height: 24.0),*/
             logininButton,
             loginoutButton,
-            forgotLabel
+            forgotLabel,
+            //new Image.asset('images/back.png',width: 1080.0,height: 1920.0,)
           ],
         ),
       ),
