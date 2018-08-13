@@ -68,7 +68,7 @@ class Home extends StatelessWidget{
       body: mostrarDatosLista,
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: (){Navigator.pushNamed(context, '/NuevaFicha');},
+          onPressed: (){Navigator.pushNamed(context, '/Fichas');},
         )
       /*Center(
         child:  Container(

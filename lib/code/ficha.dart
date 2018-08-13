@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/code/conexion.dart';
+import 'package:proyectoprograufro/views/nuevaFicha.dart';
 
 class ficha {
   final validacion_gf val = new validacion_gf();
@@ -18,30 +19,32 @@ class ficha {
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
     FirebaseUser user = await _auth.signInWithGoogle(
       accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken, );
+      idToken: googleAuth.idToken,
+    );
 
     print("signed in " + user.email);
-    return user; }
+    return user;
+  }
 
-  void addFicha(String nombre, String direcccion, String telefono, String seguro) {
+  void addFicha(String nombre, String direcccion, String edad, bool Fonasa,
+      String notas) {
     // user = signIn();
     Map<String, String> data = <String, String>{
-      "Nombre": nombre,
-      "Direccion": direcccion,
-      "Telefono": telefono,
-      "Seguro": seguro,
+      "nombre": nombre,
+      "direccion": direcccion,
+      "edad": edad,
+      "fonasa": Fonasa.toString(),
+      "notas": notas
       //"USerId": val.signIn().then((FirebaseUser user)=> user.email)
     };
     Firestore.instance
-        .collection('Prueba')
+        .collection('fichas')
         .document()
         .setData(data)
         .whenComplete(() {
       print("Datos add");
     }).catchError((e) => print(e));
   }
-
-  void removeFicha() {}
 }
 
 class MostrarFichas extends StatelessWidget {
@@ -53,9 +56,27 @@ class MostrarFichas extends StatelessWidget {
         if (!snapshot.hasData) return new Text('Loading...');
         return new ListView(
           children: snapshot.data.documents.map((DocumentSnapshot document) {
+            /*return Column(
+              children: <Widget>[
+                Text(snapshot.data.documents[1]['nombre']),
+                Text(snapshot.data.documents[0]['edad'].toString()),
+
+              ],
+            );*/
             return new ListTile(
+
               title: new Text(document['nombre']),
-              subtitle: new Text(document['edad'].toString()),
+              subtitle: new Text(document['notas'].toString()),
+              onTap: () {
+                print("CLick*********");
+                NuevaFicha().createState().modificarFicha(
+                    document['nombre'],
+                    document["direccion"],
+                    document['edad'],
+                    document['fonasa'],
+                    document['notas']);
+                Navigator.pushNamed(context, '/NuevaFicha');
+              },
 
             );
           }).toList(),
@@ -63,4 +84,9 @@ class MostrarFichas extends StatelessWidget {
       },
     );
   }
+}
+
+class EditarFichas extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {}
 }

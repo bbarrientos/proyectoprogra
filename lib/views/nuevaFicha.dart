@@ -7,11 +7,23 @@ class NuevaFicha extends StatefulWidget{
 }
 
 class Elementos extends State<NuevaFicha> {
-  final TextEditingController nombre = new TextEditingController();
-  final TextEditingController direccion = new TextEditingController();
-  final TextEditingController seguro = new TextEditingController();
-  final TextEditingController telefono = new TextEditingController();
-  bool isChecked = false;
+
+   TextEditingController nombre = new TextEditingController();
+   TextEditingController direccion = new TextEditingController();
+   TextEditingController edad = new TextEditingController();
+   TextEditingController nota = new TextEditingController();
+   String nombre1,direccion1,edad1,notas1;
+   bool isChecked= false;
+
+  void modificarFicha(String nombredb, String direccciondb, String edaddb,bool Fonasadb,String notasdb){
+    this.nombre1 = nombredb;
+    this.direccion1 = direccciondb;
+    this.edad1 = edaddb;
+    this.isChecked = Fonasadb;
+    this.notas1 = notasdb;
+    print(nombre1);
+
+  }
 
   void onChange(bool value){
     setState(() {
@@ -31,50 +43,42 @@ class Elementos extends State<NuevaFicha> {
               icon: const Icon(Icons.save),
               onPressed: () {
                 ficha().addFicha(
-                    nombre.text, direccion.text, telefono.text, seguro.text);
+                    nombre.text, direccion.text, edad.text, isChecked,nota.text);
               })
         ],
       ),
       body: new Column(
+
         children: <Widget>[
           new ListTile(
             leading: const Icon(Icons.person),
-            title: new TextField(
-              controller: nombre,
-              decoration: new InputDecoration(
-                hintText: "Nombre Paciente",
-              ),
+            title: new TextFormField(
+              initialValue: nombre1,
+
+              //controller: direccion,
+
             ),
           ),
           new ListTile(
             leading: const Icon(Icons.home),
-            title: new TextField(
+            title: new TextFormField(
+              initialValue: direccion1,
               controller: direccion,
-              decoration: new InputDecoration(
-                hintText: "Direccion",
-              ),
-            ),
-          ),
-          new ListTile(
-            leading: const Icon(Icons.accessibility),
-            title: new TextField(
-              controller: seguro,
-              decoration: new InputDecoration(
-                hintText: "Prevision",
-              ),
+
             ),
           ),
           new ListTile(
             leading: const Icon(Icons.phone_android),
-            title: new TextField(
-              controller: telefono,
+            title: new TextFormField(
+              initialValue: edad1,
+              controller: edad,
               maxLength: 9,
               maxLengthEnforced: true,
-              decoration: new InputDecoration(
-                hintText: "Celular",
-              ),
+
             ),
           ),
+
+
           new CheckboxListTile(
               title: Text("Fonasa"),
               activeColor: Colors.redAccent,
@@ -84,10 +88,23 @@ class Elementos extends State<NuevaFicha> {
               },
 
           ),
+
+
           const Divider(
             height: 1.0,
           ),
-          
+          new ListTile(
+            leading: const Icon(Icons.book),
+            title: new TextFormField(
+              initialValue: notas1,
+              maxLines: 10,
+              controller: nota,
+              decoration: new InputDecoration(
+                hintText: "Notas"
+              ),
+
+            ),
+          )
         ],
       ),
     );
