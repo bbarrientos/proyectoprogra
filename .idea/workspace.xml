@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ae4a483-f30c-4523-a1a4-a653be8c183a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/views/details/footer/showcase_cattributes.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/views/details/footer/showcase_details.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/app.dill" afterPath="$PROJECT_DIR$/build/app.dill" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d.fingerprint" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d.fingerprint" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/details_body.dart" afterPath="$PROJECT_DIR$/lib/views/details/details_body.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/details_page.dart" afterPath="$PROJECT_DIR$/lib/views/details/details_page.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/footer/details_footer.dart" afterPath="$PROJECT_DIR$/lib/views/details/footer/details_footer.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/footer/showcase_cattributes.dart" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/footer/showcase_details.dart" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/footer/showcase_pictures.dart" afterPath="$PROJECT_DIR$/lib/views/details/footer/showcase_pictures.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/header/cut_colored_image.dart" afterPath="$PROJECT_DIR$/lib/views/details/header/cut_colored_image.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_details/header/details_header.dart" afterPath="$PROJECT_DIR$/lib/views/details/header/details_header.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/cat_list.dart" afterPath="$PROJECT_DIR$/lib/views/homePrincipal.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/fichas.dart" afterPath="$PROJECT_DIR$/lib/views/fichas.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/log_In.dart" afterPath="$PROJECT_DIR$/lib/views/log_In.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/perfil.dart" afterPath="$PROJECT_DIR$/lib/views/perfil.dart" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -564,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534276966038</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Beta v0.001">
+      <created>1534281791232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1534281791232</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -578,7 +563,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1049" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -589,8 +573,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34088457" sideWeight="0.50319487" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30744338" sideWeight="0.4968051" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17367853" sideWeight="0.4978701" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30744338" sideWeight="0.4968051" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17367853" sideWeight="0.4978701" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -659,7 +643,8 @@
     <MESSAGE value="Se crea una api para centralizar los datos." />
     <MESSAGE value="Se añaden Nuevas Fonts" />
     <MESSAGE value="Se modifica las vistas del menu principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se modifica las vistas del menu principal" />
+    <MESSAGE value="Beta v0.001" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta v0.001" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
