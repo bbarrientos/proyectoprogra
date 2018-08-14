@@ -15,8 +15,6 @@ class _LoginPageState extends State<Verificacion> {
 
   @override
   Widget build(BuildContext context) {
-
-
     final logininButton = Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(

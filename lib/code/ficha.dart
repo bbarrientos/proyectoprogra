@@ -45,6 +45,9 @@ class ficha {
       print("Datos add");
     }).catchError((e) => print(e));
   }
+  void removerFIchas(){
+
+  }
 }
 
 class MostrarFichas extends StatelessWidget {
@@ -69,13 +72,16 @@ class MostrarFichas extends StatelessWidget {
               subtitle: new Text(document['notas'].toString()),
               onTap: () {
                 print("CLick*********");
-                NuevaFicha().createState().modificarFicha(
+                Firestore.instance.document('nombre').delete();
+                //snapshot.data.documents.map['nombre'],
+                //document("nombre").delete();
+                /*NuevaFicha().createState().modificarFicha(
                     document['nombre'],
                     document["direccion"],
                     document['edad'],
                     document['fonasa'],
                     document['notas']);
-                Navigator.pushNamed(context, '/NuevaFicha');
+                Navigator.pushNamed(context, '/NuevaFicha');*/
               },
 
             );

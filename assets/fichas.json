@@ -1,0 +1,46 @@
+{
+  "fichas": [
+    {
+      "nombre": "Deniel Rueda Silva",
+      "fonasa": false,
+      "id": 1,
+      "radiografias": [
+          "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/Panor%C3%A1mica-Digital-12.jpg?alt=media&token=dec49cc8-9cf5-4afa-81f4-8d4e7d05a9fd",
+          "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/project2.jpg?alt=media&token=b834ba76-09c2-4fe1-b324-12a1695a2e1c",
+          "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/radiologia-odontologica_6.jpg?alt=media&token=7151131c-f090-4719-a980-576d5e958698"
+      ],
+      "telefono": 56956891236,
+      "notas": ["10 caries"],
+      "direccion": "Av. Alemania #4785, Temuco, Chile",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/daniel-rueda-silva-fotocarnet2.jpg?alt=media&token=1d36c943-0061-466f-bacd-e86ccb2a3c0a"
+    },
+    {
+      "nombre": "Maria Jose Pincheira",
+      "fonasa": false,
+      "id": 2,
+      "radiografias": [
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/panoramica.jpg?alt=media&token=58ec3d33-bb6a-4d9b-8fb2-a71473b91a3b",
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/project2.jpg?alt=media&token=b834ba76-09c2-4fe1-b324-12a1695a2e1c",
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/radiologia-odontologica_6.jpg?alt=media&token=7151131c-f090-4719-a980-576d5e958698"
+      ],
+      "telefono": 56926235689,
+      "notas": ["Daño en molar izquierdo", "15 tapaduras", "2 caries"],
+      "direccion": "Los Sanguchito #666, Villarrica, Chile",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/foto-carnet2.jpg?alt=media&token=086ea31e-23f2-4566-b8d6-55e6d50f30ed"
+    },
+    {
+      "nombre": "Nicolas Maduro The rial",
+      "fonasa": true,
+      "id": 3,
+      "radiografias": [
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/panoramiffca.jpg?alt=media&token=4ba5471a-63f3-403c-bdf0-aa7a8fdf0a0d",
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/project2.jpg?alt=media&token=b834ba76-09c2-4fe1-b324-12a1695a2e1c",
+        "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/radiologia-odontologica_6.jpg?alt=media&token=7151131c-f090-4719-a980-576d5e958698"
+      ],
+      "telefono": 56912457889,
+      "notas": ["Limpieza en colmillo"],
+      "direccion": "Los poetas de Don Che #13, Temuco, Chile",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/db-codaufro.appspot.com/o/foto-carnet.jpg?alt=media&token=caaf8ed4-8269-4f7f-b8d5-7e1f41c80635"
+    }
+  ]
+}

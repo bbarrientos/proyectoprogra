@@ -6,6 +6,7 @@ import 'views/perfil.dart';
 import 'views/fichas.dart';
 import 'views/nuevaFicha.dart';
 import 'code/CustomRoute.dart';
+import 'views/cat_list.dart';
 
 void main() => runApp(new MyApp());
 
@@ -13,6 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
+      theme: new ThemeData(
+        primaryColor: Colors.blueAccent,
+        accentColor: Colors.amber,
+        fontFamily: 'SlateForOnePlus'
+
+
+      ),
       title: 'Coda UFRO',
       onGenerateRoute: (RouteSettings settings){
         switch(settings.name){
@@ -21,7 +29,7 @@ class MyApp extends StatelessWidget {
             settings: settings,
           );
           case '/home': return new CustomRoute(
-            builder: (_) => new Home(),
+            builder: (_) => new CatList(),
             settings: settings,
           );
           case '/Perfil': return new CustomRoute(

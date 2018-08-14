@@ -12,6 +12,7 @@ dependencies:
   firebase_auth:
   google_sign_in:
   cloud_firestore:
+  font_awesome_flutter:
 
 
 
