@@ -90,7 +90,7 @@ class Elementos extends State<Fichas> {
               maxLines: 10,
               controller: nota,
               decoration: new InputDecoration(
-                  hintText: "Notas"
+                  hintText: "Historial"
               ),
 
             ),

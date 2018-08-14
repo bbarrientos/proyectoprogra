@@ -6,7 +6,7 @@ import 'views/perfil.dart';
 import 'views/fichas.dart';
 import 'views/nuevaFicha.dart';
 import 'code/CustomRoute.dart';
-import 'views/cat_list.dart';
+import 'views/homePrincipal.dart';
 
 void main() => runApp(new MyApp());
 

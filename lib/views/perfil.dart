@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:proyectoprograufro/code/api.dart';
 class Perfil extends StatelessWidget{
+  CodaAPi _api;
   @override
   Widget build(BuildContext context){
+
     return new Scaffold(
       appBar: new AppBar(title: new Text('Perfil'),),
       body: new Center(
@@ -12,7 +14,7 @@ class Perfil extends StatelessWidget{
             children: <Widget>[
               new Row(
                 children: <Widget>[
-                  new Text('R.U.T.'),
+                 // new Text(_api),
                 ],
               ),
               new TextFormField(),

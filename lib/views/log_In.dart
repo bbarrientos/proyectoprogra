@@ -18,7 +18,7 @@ class _LoginPageState extends State<Verificacion> {
     final logininButton = Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
-        //borderRadius: BorderRadius.circular(0.0),
+        borderRadius: BorderRadius.circular(0.0),
         shadowColor: Colors.lightBlueAccent.shade100,
         elevation: 5.0,
         child: MaterialButton(
@@ -61,7 +61,7 @@ class _LoginPageState extends State<Verificacion> {
       child: null
     );
 
-    final forgotLabel = FlatButton(
+   /* final forgotLabel = FlatButton(
       child: Text(
         'Recuperar contraseña?',
         style: TextStyle(color: Colors.black54),
@@ -70,14 +70,17 @@ class _LoginPageState extends State<Verificacion> {
         Navigator.pushNamed(context, '/home');
       },
     );
-
+*/
     return Scaffold(
       backgroundColor: Colors.white,
+      
       body: Center(
         child: ListView(
+          
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
+            new Image.network("https://www.ufro.cl/joomlatools-files/docman-images/generated/c51ce410c124a10e0db5e4b97fc2af39.png"),
             /*logo,
             SizedBox(height: 48.0),
             email,
@@ -86,8 +89,8 @@ class _LoginPageState extends State<Verificacion> {
             SizedBox(height: 24.0),*/
             logininButton,
             loginoutButton,
-            forgotLabel,
-            //new Image.asset('images/back.png',width: 1080.0,height: 1920.0,)
+            //forgotLabel,
+            //new Image("images/back.png")
           ],
         ),
       ),
