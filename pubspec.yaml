@@ -34,7 +34,18 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/ufro.png
+    - assets/fichas.json
   #  - images/a_dot_ham.jpeg
+  fonts:
+    - family: SlateForOnePlus
+      fonts :
+        - asset: fonts/SlateForOnePlus-Black.ttf
+        - asset: fonts/SlateForOnePlus-Bold.ttf
+        - asset: fonts/SlateForOnePlus-Book.ttf
+        - asset: fonts/SlateForOnePlus-Light.ttf
+        - asset: fonts/SlateForOnePlus-Medium.ttf
+        - asset: fonts/SlateForOnePlus-Regular.ttf
+        - asset: fonts/SlateForOnePlus-Thin.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
