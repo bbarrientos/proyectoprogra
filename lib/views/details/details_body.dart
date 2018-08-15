@@ -1,10 +1,10 @@
 import 'package:proyectoprograufro/modelo/ficha.dart';
 import 'package:flutter/material.dart';
 
-class CatDetailBody extends StatelessWidget {
+class FichaDetailBody extends StatelessWidget {
   final Ficha ficha;
 
-  CatDetailBody(this.ficha);
+  FichaDetailBody(this.ficha);
 
   _createCircleBadge(IconData iconData, Color color) {
     return new Padding(

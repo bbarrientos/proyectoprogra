@@ -7,12 +7,12 @@ import 'package:proyectoprograufro/views//routes.dart';
 import 'package:flutter/material.dart';
 import 'package:proyectoprograufro/code/conexion.dart';
 
-class CatList extends StatefulWidget {
+class FichaList extends StatefulWidget {
   @override
-  _CatListState createState() => new _CatListState();
+  _FichaListState createState() => new _FichaListState();
 }
 
-class _CatListState extends State<CatList> {
+class _FichaListState extends State<FichaList> {
   List<Ficha> _fichas = [];
   CodaAPi _api;
   NetworkImage _profileImage;
@@ -25,19 +25,19 @@ class _CatListState extends State<CatList> {
 
   _loadFromFirebase() async {
     final api = await CodaAPi.signInWithGoogle();
-    final cats = await api.getTodasFichas();
+    final fichas = await api.getTodasFichas();
     setState(() {
       _api = api;
-      _fichas = cats;
+      _fichas = fichas;
       _profileImage = new NetworkImage(api.firebaseUser.photoUrl);
     });
   }
 
-  _reloadCats() async {
+  _reloadfichas() async {
     if (_api != null) {
-      final cats = await _api.getTodasFichas();
+      final fichas = await _api.getTodasFichas();
       setState(() {
-        _fichas = cats;
+        _fichas = fichas;
       });
     }
   }
@@ -81,7 +81,7 @@ class _CatListState extends State<CatList> {
     Navigator.of(context).push(
       new FadePageRoute(
         builder: (c) {
-          return new CatDetailsPage(ficha, avatarTag: avatarTag);
+          return new FichaDetailsPage(ficha, avatarTag: avatarTag);
         },
         settings: new RouteSettings(),
       ),
@@ -163,7 +163,7 @@ class _CatListState extends State<CatList> {
   }
 
   Future<Null> refresh() {
-    _reloadCats();
+    _reloadfichas();
     return new Future<Null>.value();
   }
 

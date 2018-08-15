@@ -1,19 +1,19 @@
 import 'package:proyectoprograufro/modelo/ficha.dart';
-import 'package:proyectoprograufro/views/details/footer/showcase_cattributes.dart';
+import 'package:proyectoprograufro/views/details/footer/showcase_fichatributes.dart';
 import 'package:proyectoprograufro/views/details/footer/showcase_details.dart';
 import 'package:proyectoprograufro/views/details/footer/showcase_pictures.dart';
 import 'package:flutter/material.dart';
 
-class CatShowcase extends StatefulWidget {
+class FichaShowcase extends StatefulWidget {
   final Ficha ficha;
 
-  CatShowcase(this.ficha);
+  FichaShowcase(this.ficha);
 
   @override
-  _CatShowcaseState createState() => new _CatShowcaseState();
+  _FichaShowcaseState createState() => new _FichaShowcaseState();
 }
 
-class _CatShowcaseState extends State<CatShowcase>
+class _FichaShowcaseState extends State<FichaShowcase>
     with TickerProviderStateMixin {
   List<Tab> _tabs;
   List<Widget> _pages;
@@ -30,7 +30,7 @@ class _CatShowcaseState extends State<CatShowcase>
     _pages = [
       new PicturesShowcase(widget.ficha),
       new DetailsShowcase(widget.ficha),
-      new CattributesShowcase(widget.ficha),
+      new FichatributesShowcase(widget.ficha),
     ];
     _controller = new TabController(
       length: _tabs.length,

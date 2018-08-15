@@ -6,62 +6,28 @@ import 'package:proyectoprograufro/views/details/header/cut_colored_image.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-class CatDetailHeader extends StatefulWidget {
+class   FichaDetailHeader extends StatefulWidget {
   final Ficha ficha;
   final Object avatarTag;
 
-  CatDetailHeader(
+  FichaDetailHeader(
     this.ficha, {
     @required this.avatarTag,
   });
 
   @override
-  _CatDetailHeaderState createState() => new _CatDetailHeaderState();
+  _FichaDetailHeaderState createState() => new _FichaDetailHeaderState();
 }
 
-class _CatDetailHeaderState extends State<CatDetailHeader> {
+class _FichaDetailHeaderState extends State<FichaDetailHeader> {
   static const BACKGROUND_IMAGE = 'images/profile_header_background.png';
-
-  String _likeText = "";
   StreamSubscription _watcher;
 
   Future<CodaAPi> _api;
 
-/*  void likeCat() async {
-    // TODO: Create proper singleton.
-    final api = await _api;
-    if (await api.atencion(widget.ficha)) {
-      api.atencion(widget.ficha);
-      setState(() {
-        _likeCounter -= 1;
-        _likeText = "Atencion";
-      });
-    }
-  }
-
-  void updateLikeState() async {
-    final api = await _api;
-    _watcher = api.watch(widget.ficha, (ficha) {
-      if (mounted) {
-        setState(() {
-          _likeCounter = ficha.likeCounter;
-        });
-      }
-    });
-
-    bool liked = await api.hasLikedCat(widget.cat);
-    if (mounted) {
-      setState(() {
-        _likeDisabled = false;
-        _likeText = liked ? "UN-LIKE" : "LIKE";
-      });
-    }
-  }*/
-
   @override
   void initState() {
     super.initState();
-    /*_likeCounter = widget.cat.likeCounter;*/
     _api = CodaAPi.signInWithGoogle();
     //updateLikeState();
   }
@@ -98,27 +64,6 @@ class _CatDetailHeaderState extends State<CatDetailHeader> {
       ),
     );
 
-    /*var likeInfo = new Padding(
-      padding: const EdgeInsets.only(top: 16.0),
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          new Icon(
-            Icons.thumb_up,
-            color: Colors.white,
-            size: 16.0,
-          ),
-          new Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: new Text(
-              _likeCounter.toString(),
-              style: textTheme.subhead.copyWith(color: Colors.white),
-            )
-          )
-        ],
-      ),
-    );*/
-
     var actionButtons = new Padding(
       padding: const EdgeInsets.only(
         top: 16.0,
@@ -135,21 +80,10 @@ class _CatDetailHeaderState extends State<CatDetailHeader> {
               color: theme.accentColor,
               textColor: Colors.white,
               onPressed: () async {
-                //TODO Handle Adopt
               },
               child: new Text('Paciente'),
             ),
           )
-/*          new ClipRRect(
-            borderRadius: new BorderRadius.circular(30.0),
-            child: new RaisedButton(
-              color: Colors.lightGreen,
-              disabledColor: Colors.grey,
-              textColor: Colors.white,
-              //onPressed: _likeDisabled ? null : likeCat,
-              child: new Text(_likeText),
-            ),
-          ),*/
         ],
       ),
     );

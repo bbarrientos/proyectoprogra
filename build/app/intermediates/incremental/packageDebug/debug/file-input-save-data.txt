@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 14 18:21:38 CLST 2018
+#Wed Aug 15 12:33:28 CLST 2018
 17.baseType=DIRECTORY
 4.path=flutter_assets/fonts/SlateForOnePlus-Black.ttf
 25.base=/home/s2c52/git/GItHub/proyectoprograufro/build/app/intermediates/assets/debug

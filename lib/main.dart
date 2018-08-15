@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'views/log_In.dart';
-import 'views/home.dart';
 import 'views/perfil.dart';
 import 'views/fichas.dart';
 import 'views/nuevaFicha.dart';
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
             settings: settings,
           );
           case '/home': return new CustomRoute(
-            builder: (_) => new CatList(),
+            builder: (_) => new FichaList(),
             settings: settings,
           );
           case '/Perfil': return new CustomRoute(

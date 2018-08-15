@@ -2,17 +2,17 @@ import 'package:proyectoprograufro/modelo/ficha.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-final dynamic cattributeLookup = {
+final dynamic fichatributeLookup = {
   "children": {"name": "Kid Friendly", "icon": FontAwesomeIcons.child},
   "desexed": {"name": "Desexed", "icon": FontAwesomeIcons.cut},
   "vaccinated": {"name": "Vaccinated", "icon": FontAwesomeIcons.eyeDropper},
   "microchipped": {"name": "Microchipped", "icon": FontAwesomeIcons.microchip},
 };
 
-class CattributesShowcase extends StatelessWidget {
+class FichatributesShowcase extends StatelessWidget {
   final Ficha ficha;
 
-  CattributesShowcase(this.ficha);
+  FichatributesShowcase(this.ficha);
 
   @override
   Widget build(BuildContext context) {

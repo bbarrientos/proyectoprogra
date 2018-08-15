@@ -5,20 +5,20 @@ import 'package:proyectoprograufro/views/details/header/details_header.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-class CatDetailsPage extends StatefulWidget {
+class FichaDetailsPage extends StatefulWidget {
   final Ficha ficha;
   final Object avatarTag;
 
-  CatDetailsPage(
+  FichaDetailsPage(
     this.ficha, {
     @required this.avatarTag,
   });
 
   @override
-  _CatDetailsPageState createState() => new _CatDetailsPageState();
+  _FichaDetailsPageState createState() => new _FichaDetailsPageState();
 }
 
-class _CatDetailsPageState extends State<CatDetailsPage> {
+class _FichaDetailsPageState extends State<FichaDetailsPage> {
   @override
   Widget build(BuildContext context) {
     var linearGradient = new BoxDecoration(
@@ -39,15 +39,15 @@ class _CatDetailsPageState extends State<CatDetailsPage> {
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              new CatDetailHeader(
+              new FichaDetailHeader(
                 widget.ficha,
                 avatarTag: widget.avatarTag,
               ),
               new Padding(
                 padding: const EdgeInsets.all(24.0),
-                child: new CatDetailBody(widget.ficha),
+                child: new FichaDetailBody(widget.ficha),
               ),
-              new CatShowcase(widget.ficha),
+              new FichaShowcase(widget.ficha),
             ],
           ),
         ),
