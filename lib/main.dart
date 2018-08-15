@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'views/log_In.dart';
-import 'views/perfil.dart';
-import 'views/fichas.dart';
-import 'views/nuevaFicha.dart';
+// import 'views/perfil.dart';
+//import 'views/fichas.dart';
+// import 'views/nuevaFicha.dart';
 import 'code/CustomRoute.dart';
 import 'views/homePrincipal.dart';
 
@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primaryColor: Colors.blueAccent,
         accentColor: Colors.amber,
@@ -31,18 +32,18 @@ class MyApp extends StatelessWidget {
             builder: (_) => new FichaList(),
             settings: settings,
           );
-          case '/Perfil': return new CustomRoute(
-            builder: (_) => new Perfil(),
-            settings: settings,
-          );
-          case '/Fichas': return new CustomRoute(
-            builder: (_) => new Fichas(),
-            settings: settings,
-          );
-          case '/NuevaFicha': return new CustomRoute(
-            builder: (_) => new NuevaFicha(),
-            settings: settings,
-          );
+          // case '/Perfil': return new CustomRoute(
+          //   builder: (_) => new Perfil(),
+          //   settings: settings,
+          // );
+          // case '/Fichas': return new CustomRoute(
+          //   builder: (_) => new Fichas(),
+          //   settings: settings,
+          // );
+          // case '/NuevaFicha': return new CustomRoute(
+          //   builder: (_) => new NuevaFicha(),
+          //   settings: settings,
+          // );
         }
         assert(false);
       }

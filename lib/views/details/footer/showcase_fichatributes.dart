@@ -58,6 +58,6 @@ class FichatributesShowcase extends StatelessWidget {
         ),
       );
     }
-
+    return null;
   }
 }

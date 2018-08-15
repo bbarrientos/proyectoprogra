@@ -6,7 +6,7 @@ class Ficha {
   final String nombre;
   final String direccion;
   final String avatarUrl;
-
+  final List<String> usuariosId;
   final int telefono;
   final bool fonasa;
   final List<String> radiografias;
@@ -19,6 +19,7 @@ class Ficha {
     @required this.direccion,
     @required this.avatarUrl,
     @required this.telefono,
+    @required this.usuariosId,
     @required this.fonasa,
     @required this.radiografias,
     @required this.notas

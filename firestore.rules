@@ -3,5 +3,16 @@ service cloud.firestore {
     match /{document=**} {
       allow read, write: if true;
     }
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function catIdFromLikeId(likeId) {
+      return likeId.split(':')[0]
+    }
+
+    function userIdFromLikeId(likeId) {
+      return likeId.split(':')[1];
+    }
   }
 }

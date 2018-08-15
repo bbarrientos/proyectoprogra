@@ -51,14 +51,14 @@ class _LoginPageState extends State<Verificacion> {
         ),
       ),
     );
-    final background = Container(
-      decoration: new BoxDecoration(
-        image : new DecorationImage(
-          image: new AssetImage("images/back.png")
-        )
-      ),
-      child: null
-    );
+    // final background = Container(
+    //   decoration: new BoxDecoration(
+    //     image : new DecorationImage(
+    //       image: new AssetImage("images/back.png")
+    //     )
+    //   ),
+    //   child: null
+    // );
 
    /* final forgotLabel = FlatButton(
       child: Text(

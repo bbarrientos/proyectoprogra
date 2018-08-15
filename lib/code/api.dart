@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert'; //borrar
 
 import 'package:proyectoprograufro/modelo/ficha.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -12,28 +11,6 @@ class CodaAPi {
 
   FirebaseUser firebaseUser;
 
-  //borrar
-
-/*  static List<Ficha> allfichasFromJson(String jsonData) {
-    List<Ficha> fichas = [];
-    json.decode(jsonData)['fichas'].forEach((ficha) => fichas.add(_forMap(ficha)));
-    return fichas;
-  }
-
-  static Ficha _forMap(Map<String, dynamic> map) {
-    return new Ficha(
-        externalId: map['id'],
-        nombre: map['nombre'],
-        direccion: map['id'],
-        avatarUrl: map['direccion'],
-        telefono: map['telefono'],
-        fonasa: map['fonasa'],
-        radiografias: new List<String>.from(map['radiografias']),
-        notas: new List<String>.from(map['notas']),
-    );
-  }
-
-  //borrar*/
   CodaAPi(FirebaseUser user) {
     this.firebaseUser = user;
   }
@@ -57,6 +34,7 @@ class CodaAPi {
   }
 
   Future<List<Ficha>> getTodasFichas() async {
+
     return (await Firestore.instance.collection('fichas').getDocuments())
         .documents
         .map((snapshot) => _fromDocumentSnapshot(snapshot))
@@ -79,6 +57,7 @@ class CodaAPi {
         nombre: data['nombre'],
         direccion: data['direccion'],
         avatarUrl: data['image_url'],
+        usuariosId: new List<String>.from(data['usuariosId']),
         telefono: data['telefono'],
         fonasa: data['fonasa'],
         radiografias: new List<String>.from(data['radiografias']),
@@ -90,12 +69,12 @@ class CodaAPi {
         .document('${ficha.documentId}:${this.firebaseUser.uid}')
         .setData({});
   }
-  Future<bool> Trabajando(Ficha ficha) async {
-    final trabajandoactualmente = await Firestore.instance
-        .collection('trabajo')
-        .document('${ficha.documentId}:${this.firebaseUser.uid}')
-        .get();
+  // Future<bool> Trabajando(Ficha ficha) async {
+  //   final trabajandoactualmente = await Firestore.instance
+  //       .collection('trabajo')
+  //       .document('${ficha.documentId}:${this.firebaseUser.uid}')
+  //       .get();
 
-    return trabajandoactualmente.exists;
-  }
+  //   return trabajandoactualmente.exists;
+  // }
 }

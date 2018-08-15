@@ -45,6 +45,10 @@ class _FichaListState extends State<FichaList> {
   Widget _buildCatItem(BuildContext context, int index) {
     Ficha ficha = _fichas[index];
     //_lateralMenu();
+    if(_api.firebaseUser.uid == ficha.usuariosId[0]){
+      print("*************CORRECTO*******************");
+    };
+    //print(_api.firebaseUser.uid);
     return new Container(
 
       margin: const EdgeInsets.only(top: 5.0),
@@ -97,47 +101,44 @@ class _FichaListState extends State<FichaList> {
         fontSize: 32.0,
       ),
     );
-    return new Drawer(
-
-    );
   }
-  Widget _lateralMenu(){
-    return new Drawer(
-      child: new Column(
-        children: <Widget>[
-          new ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text('Perfil'),
-            onTap: (){
-              Navigator.pushNamed(context, '/Perfil');
-            },
-          ),
-          new ListTile(
-            leading: const Icon(Icons.insert_drive_file),
-            title: const Text('Fichas'),
-            onTap:(){
-              Navigator.pushNamed(context, '/Fichas');
-            },
-          ),
-          new ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Ajustes'),
-            onTap:(){
-              Navigator.pushNamed(context, '/Ajustes');
-            },
-          ),
-          new ListTile(
-            leading: const Icon(Icons.exit_to_app),
-            title: const Text('Desconectarse'),
-            onTap:(){
-              validacion_gf().singOut();
-              Navigator.pushNamed(context, '/');
-            },
-          ),
-        ],
-      ),
-    );
-  }
+  // Widget _lateralMenu(){
+  //   return new Drawer(
+  //     child: new Column(
+  //       children: <Widget>[
+  //         new ListTile(
+  //           leading: const Icon(Icons.person),
+  //           title: const Text('Perfil'),
+  //           onTap: (){
+  //             Navigator.pushNamed(context, '/Perfil');
+  //           },
+  //         ),
+  //         new ListTile(
+  //           leading: const Icon(Icons.insert_drive_file),
+  //           title: const Text('Fichas'),
+  //           onTap:(){
+  //             Navigator.pushNamed(context, '/Fichas');
+  //           },
+  //         ),
+  //         new ListTile(
+  //           leading: const Icon(Icons.settings),
+  //           title: const Text('Ajustes'),
+  //           onTap:(){
+  //             Navigator.pushNamed(context, '/Ajustes');
+  //           },
+  //         ),
+  //         new ListTile(
+  //           leading: const Icon(Icons.exit_to_app),
+  //           title: const Text('Desconectarse'),
+  //           onTap:(){
+  //             validacion_gf().singOut();
+  //             Navigator.pushNamed(context, '/');
+  //           },
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 
 
   Widget _buildBody() {
@@ -204,7 +205,7 @@ class _FichaListState extends State<FichaList> {
                 child:new Column(
                   children: <Widget>[
                     new Text('CODA ufrooo'),
-                    new Image(image: _profileImage)
+                    //new Image(image: _profileImage)
                   ],
                 )
                 // const Text('CODA UFRO')

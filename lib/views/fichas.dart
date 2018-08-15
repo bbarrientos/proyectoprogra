@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyectoprograufro/code/ficha.dart';
+// import 'package:proyectoprograufro/code/ficha.dart';
 
 class Fichas extends StatefulWidget{
   @override
@@ -32,8 +32,8 @@ class Elementos extends State<Fichas> {
           new IconButton(
               icon: const Icon(Icons.save),
               onPressed: () {
-                ficha().addFicha(
-                    nombre.text, direccion.text, edad.text, isChecked,nota.text);
+                // Ficha().addFicha(
+                //     nombre.text, direccion.text, edad.text, isChecked,nota.text);
               })
         ],
       ),
