@@ -34,7 +34,6 @@ class CodaAPi {
   }
 
   Future<List<Ficha>> getTodasFichas() async {
-
     return (await Firestore.instance.collection('fichas').getDocuments())
         .documents
         .map((snapshot) => _fromDocumentSnapshot(snapshot))
@@ -47,6 +46,36 @@ class CodaAPi {
         .snapshots()
         .listen(((snapshot) => onChange(_fromDocumentSnapshot(snapshot))));
   }
+  
+  Future<List<Ficha>> getUsuarioFichas()async{
+
+    final usuarioFicha = await getTodasFichas();
+    List<Ficha> _fichass = [];
+    List<Ficha> usableFicha=[];
+
+    _fichass = usuarioFicha;
+    print(_fichass.length);
+    for (var i = 0; i < _fichass.length; i++) {
+      //final uidd = _fichass.;
+      //Ficha ficha = _fichass[1];
+      //print(object)
+      for (var j = 0; j <= 1; j++) {
+
+        if(firebaseUser.uid == _fichass[i].usuariosId[j]){
+          usableFicha.add(_fichass[i]);
+         // print("Usuario "+firebaseUser.email);
+          //print(_fichass[i].usuariosId[j]);
+          //print("Pruba pasada**************************** i $i  j $j");
+          //print(usableFicha);
+        }
+        //print(usableFicha);
+      }
+      print("object$i");
+      print(usableFicha);
+    }
+    print("Sle");
+    return usableFicha;
+  } 
 
   Ficha _fromDocumentSnapshot(DocumentSnapshot snapshot) {
     final data = snapshot.data;
