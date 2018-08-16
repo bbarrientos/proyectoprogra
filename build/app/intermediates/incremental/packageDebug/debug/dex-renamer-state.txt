@@ -1,4 +1,4 @@
-#Thu Aug 16 00:50:53 CLST 2018
+#Thu Aug 16 01:14:14 CLST 2018
 base.0=/home/s2c52/git/GItHub/proyectoprograufro/build/app/intermediates/transforms/dexMerger/debug/0
 path.1=classes2.dex
 renamed.1=classes2.dex

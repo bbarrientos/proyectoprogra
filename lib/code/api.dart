@@ -59,8 +59,8 @@ class CodaAPi {
       //final uidd = _fichass.;
       //Ficha ficha = _fichass[1];
       //print(object)
-      for (var j = 0; j <= 1; j++) {
-
+      for (var j = 0; j < _fichass[i].usuariosId.length; j++) {
+        print(_fichass[i].usuariosId[j]);
         if(firebaseUser.uid == _fichass[i].usuariosId[j]){
           usableFicha.add(_fichass[i]);
          // print("Usuario "+firebaseUser.email);
